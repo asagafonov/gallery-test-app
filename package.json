@@ -1,0 +1,70 @@
+{
+  "name": "alfabank_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "babel": "babel src -d dist",
+    "dev": "webpack serve --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asagafonov/alfabank_test.git"
+  },
+  "author": "asagafonov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asagafonov/alfabank_test/issues"
+  },
+  "homepage": "https://github.com/asagafonov/alfabank_test#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.7.1",
+    "@swc/core": "^1.2.135",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "image-minimizer-webpack-plugin": "^3.2.3",
+    "mini-css-extract-plugin": "^2.5.3",
+    "nodemon-webpack-plugin": "^4.7.0",
+    "postcss-import": "^14.0.2",
+    "postcss-nesting": "^10.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "source-map-loader": "^3.0.1",
+    "terser-webpack-plugin": "^5.3.0",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.67.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@squoosh/lib": "^0.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "postcss": "^8.4.5",
+    "postcss-loader": "^6.2.1",
+    "postcss-nested": "^5.0.6",
+    "style-loader": "^3.3.1",
+    "stylelint-config-standard": "^24.0.0",
+    "tailwindcss": "^3.0.17",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.3"
+  }
+}
