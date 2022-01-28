@@ -3,6 +3,9 @@ import { useDispatch } from 'react-redux';
 
 import { addLike, removeLike, removeCard } from '../slices/cardsReducer';
 import { ImageCardProps } from '../utils/interfaces';
+import activeLikeImg from '../assets/activeLike.png';
+import inactiveLikeImg from '../assets/inactiveLike.png';
+import trashImg from '../assets/trash.png';
 
 const ImageCard = (props: ImageCardProps) => {
   const {
@@ -14,32 +17,32 @@ const ImageCard = (props: ImageCardProps) => {
   return (
     <div className="gallery__card">
       <img
+        className="gallery__card__artwork"
         src={url}
         alt="pic"
       />
-      <p>{title}</p>
+      <p className="gallery__card__title">{title}</p>
       <div className="gallery__card__controls">
         <button
           type="button"
-          className="gallery__card__controls__like-btn"
+          className="gallery__card__controls__btn"
           onClick={
             hasLike
               ? () => dispatch(removeLike({ cardId: id }))
               : () => dispatch(addLike({ cardId: id }))
           }
         >
-          {
-            hasLike
-              ? 'I have like'
-              : 'I have no like'
-          }
+          <img
+            src={hasLike ? activeLikeImg : inactiveLikeImg}
+            alt="like"
+          />
         </button>
         <button
           type="button"
-          className="gallery__card__controls__remove-btn"
+          className="gallery__card__controls__btn"
           onClick={() => dispatch(removeCard({ cardId: id }))}
         >
-          Remove
+          <img src={trashImg} alt="delete" />
         </button>
       </div>
     </div>
