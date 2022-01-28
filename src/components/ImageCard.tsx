@@ -22,7 +22,7 @@ const ImageCard = (props: ImageCardProps) => {
         src={url}
         alt="pic"
       />
-      <p className="gallery__card__title">{titleWithoutInfoInBraces}</p>
+      <div className="gallery__card__title">{titleWithoutInfoInBraces}</div>
       <div className="gallery__card__controls">
         <button
           type="button"

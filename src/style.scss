@@ -39,22 +39,22 @@
 }
 
 .gallery {
-  @apply relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-center gap-8 mb-10 px-8;
+  @apply relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8 mb-10 px-8;
 
   &__card {
-    @apply flex flex-col justify-between bg-white shadow-2xl aspect-square p-6;
+    @apply flex flex-col place-self-stretch justify-between bg-white shadow-2xl aspect-square p-6;
 
     &__artwork {
       @apply w-full aspect-square object-cover object-top;
     }
 
     &__title {
-      @apply h-12 mt-6 mb-6 font-bold overflow-y-scroll;
+      @apply mt-6 mb-6 font-bold overflow-y-scroll;
       font-size: 0.9rem;
     }
 
     &__controls {
-      @apply flex justify-end items-center gap-3;
+      @apply flex justify-end items-center gap-4;
 
       &__btn {
         @apply w-6 h-6 hover:scale-110 ease-out duration-300;
