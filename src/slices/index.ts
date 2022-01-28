@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cardsReducer from './cardsReducer';
 
-export default configureStore({
+const store = configureStore({
   reducer: {
-    cards: cardsReducer,
+    cardsContainer: cardsReducer,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>
+
+export default store;
