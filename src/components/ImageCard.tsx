@@ -2,12 +2,12 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 import { addLike, removeLike, removeCard } from '../slices/cardsReducer';
-import { ImageCardProps } from '../utils/interfaces';
+import { CardProps } from '../utils/interfaces';
 import activeLikeImg from '../assets/activeLike.png';
 import inactiveLikeImg from '../assets/inactiveLike.png';
 import trashImg from '../assets/trash.png';
 
-const ImageCard = (props: ImageCardProps) => {
+const ImageCard = (props: CardProps) => {
   const {
     id, title, url, hasLike,
   } = props;

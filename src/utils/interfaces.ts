@@ -1,9 +1,12 @@
-interface Card {
+interface CardProps {
   id: number,
   title: string,
-  image_id: number,
   url: string,
   hasLike: boolean,
+}
+
+interface Card extends CardProps {
+  image_id: number,
 }
 
 interface CardsState {
@@ -11,11 +14,4 @@ interface CardsState {
   filterIsOn: boolean,
 }
 
-interface ImageCardProps {
-  id: number,
-  title: string,
-  url: string,
-  hasLike: boolean,
-}
-
-export type { Card, CardsState, ImageCardProps };
+export type { Card, CardsState, CardProps };
