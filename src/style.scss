@@ -5,8 +5,12 @@
 .header {
   @apply flex justify-between items-center h-20 bg-black mb-12 px-8;
 
+  &__logo {
+    @apply w-14 h-14 bg-white;
+  }
+
   &__filter-button {
-    @apply flex items-center w-16 h-8 rounded-full bg-white px-1;
+    @apply relative flex items-center w-16 h-8 rounded-full bg-white px-1;
 
     &_off {
       @apply justify-start;
@@ -20,10 +24,22 @@
       @apply w-7 h-7 bg-black rounded-full;
     }
   }
+
+  &__wrapper {
+    @apply flex items-center gap-4;
+
+    &__description {
+      @apply text-white text-xs;
+
+      &_active {
+        @apply text-yellow-500;
+      }
+    }
+  }
 }
 
 .gallery {
-  @apply flex flex-wrap justify-center items-center gap-8;
+  @apply relative flex flex-wrap justify-center items-center gap-8 mb-10;
 
   &__card {
     @apply flex flex-col justify-between w-1/4 bg-white shadow-2xl aspect-square p-6;
@@ -40,8 +56,20 @@
       @apply flex justify-end items-center gap-3;
 
       &__btn {
-        @apply w-6 h-6;
+        @apply w-6 h-6 hover:scale-110 ease-out duration-300;
       }
     }
+  }
+
+  &__loading {
+    @apply flex justify-center items-center gap-4 w-full h-[80vh] text-4xl;
+
+    &__spinner {
+      @apply w-9 h-9 animate-spin;
+    }
+  }
+
+  &__error-message {
+    @apply flex justify-center items-center gap-4 w-full h-[80vh] text-4xl;
   }
 }
