@@ -47,7 +47,7 @@ module.exports = merge(common, {
         collapseWhitespace: true,
         removeComments: true,
       },
-      favicon: './src/assets/logo.svg',
+      favicon: './src/assets/museumLogo.svg',
     }),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new CleanWebpackPlugin(),
