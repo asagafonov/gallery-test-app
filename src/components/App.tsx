@@ -1,29 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useDispatch } from 'react-redux';
 
 import CardsGallery from './CardsGallery';
-import { switchFilter } from '../slices/cardsReducer';
+import Header from './Header';
 
-const App = () => {
-  const dispatch = useDispatch();
-
-  return (
-    <>
-      <header className="header">
-        <h1>Museum</h1>
-        <motion.button
-          type="button"
-          className="header__filter-button"
-          onClick={() => dispatch(switchFilter())}
-          layout
-        >
-          Filter!
-        </motion.button>
-      </header>
-      <CardsGallery />
-    </>
-  );
-};
+const App = () => (
+  <>
+    <Header />
+    <CardsGallery />
+  </>
+);
 
 export default App;
