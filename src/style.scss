@@ -1,10 +1,47 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/utilities';
 
-.cards-container {
+
+.header {
+  @apply flex justify-between items-center h-20 bg-black mb-12 px-8;
+
+  &__filter-button {
+    @apply flex items-center w-16 h-8 rounded-full bg-white px-1;
+
+    &_off {
+      @apply justify-start;
+    }
+
+    &_on {
+      @apply justify-end;
+    }
+
+    &__circle {
+      @apply w-7 h-7 bg-black rounded-full;
+    }
+  }
+}
+
+.gallery {
   @apply flex flex-wrap justify-center items-center gap-8;
 
   &__card {
-    @apply w-1/4;
+    @apply flex flex-col justify-between w-1/4 bg-white shadow-2xl aspect-square p-6;
+
+    &__artwork {
+      @apply w-full aspect-square object-cover object-top;
+    }
+
+    &__title {
+      @apply h-16 mt-6;
+    }
+
+    &__controls {
+      @apply flex justify-end items-center gap-3;
+
+      &__btn {
+        @apply w-6 h-6;
+      }
+    }
   }
 }
