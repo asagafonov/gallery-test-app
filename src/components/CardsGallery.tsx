@@ -56,25 +56,36 @@ const CardsGallery = () => {
         </div>
       )
       : (
-        <div className="gallery">
-          {
-            filteredCards.map((card: Card) => {
-              const {
-                id, title, url, hasLike,
-              } = card;
+        <>
+          <p className="gallery__count">
+            showing
+            {' '}
+            <span className="gallery__count_bold">
+              {filteredCards.length}
+            </span>
+            {' '}
+            {filteredCards.length === 1 ? 'item' : 'items'}
+          </p>
+          <div className="gallery">
+            {
+              filteredCards.map((card: Card) => {
+                const {
+                  id, title, url, hasLike,
+                } = card;
 
-              return (
-                <ImageCard
-                  id={id}
-                  title={title}
-                  url={url}
-                  hasLike={hasLike}
-                  key={id}
-                />
-              );
-            })
-          }
-        </div>
+                return (
+                  <ImageCard
+                    id={id}
+                    title={title}
+                    url={url}
+                    hasLike={hasLike}
+                    key={id}
+                  />
+                );
+              })
+            }
+          </div>
+        </>
       )
   );
 };
