@@ -7,6 +7,7 @@ import { setCardsData } from '../slices/cardsReducer';
 import { RootState } from '../slices/index';
 import { Card } from '../utils/interfaces';
 import ImageCard from './ImageCard';
+import spinnerImg from '../assets/spinner.png';
 
 const CardsGallery = () => {
   const [error, setError] = useState('');
@@ -35,12 +36,25 @@ const CardsGallery = () => {
     : cards;
 
   if (error) {
-    return <div className="gallery__error-message">Error</div>;
+    return (
+      <div className="gallery__error-message">
+        Error. Try refreshing the page
+      </div>
+    );
   }
 
   return (
     isLoading
-      ? <div className="gallery__loading">Loading...</div>
+      ? (
+        <div className="gallery__loading">
+          <img
+            className="gallery__loading__spinner"
+            src={spinnerImg}
+            alt="spinner"
+          />
+          Loading
+        </div>
+      )
       : (
         <div className="gallery">
           {
