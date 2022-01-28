@@ -3,7 +3,7 @@
 
 
 .header {
-  @apply flex justify-between items-center h-20 bg-black mb-12 px-8;
+  @apply flex justify-between items-center h-20 bg-black mb-8 px-8;
 
   &__logo {
     @apply w-14 h-14 bg-white;
@@ -39,17 +39,17 @@
 }
 
 .gallery {
-  @apply relative flex flex-wrap justify-center items-center gap-8 mb-10;
+  @apply relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 items-center gap-8 mb-10 px-8;
 
   &__card {
-    @apply flex flex-col justify-between w-1/4 bg-white shadow-2xl aspect-square p-6;
+    @apply flex flex-col justify-between bg-white shadow-2xl aspect-square p-6;
 
     &__artwork {
       @apply w-full aspect-square object-cover object-top;
     }
 
     &__title {
-      @apply h-16 mt-6;
+      @apply h-12 mt-6 mb-6 overflow-y-scroll;
     }
 
     &__controls {
@@ -61,8 +61,16 @@
     }
   }
 
+  &__count {
+    @apply px-8 mb-4;
+
+    &_bold {
+      @apply font-bold;
+    }
+  }
+
   &__loading {
-    @apply flex justify-center items-center gap-4 w-full h-[80vh] text-4xl;
+    @apply flex justify-center items-center gap-4 w-full h-[80vh] text-2xl lg:text-4xl;
 
     &__spinner {
       @apply w-9 h-9 animate-spin;
@@ -70,6 +78,6 @@
   }
 
   &__error-message {
-    @apply flex justify-center items-center gap-4 w-full h-[80vh] text-4xl;
+    @apply flex justify-center items-center gap-4 w-full h-[80vh] text-2xl lg:text-4xl;
   }
 }
