@@ -13,6 +13,7 @@ const ImageCard = (props: ImageCardProps) => {
   } = props;
 
   const dispatch = useDispatch();
+  const titleWithoutInfoInBraces = title.replace(/\((.*?)\)/g, '');
 
   return (
     <div className="gallery__card">
@@ -21,7 +22,7 @@ const ImageCard = (props: ImageCardProps) => {
         src={url}
         alt="pic"
       />
-      <p className="gallery__card__title">{title}</p>
+      <p className="gallery__card__title">{titleWithoutInfoInBraces}</p>
       <div className="gallery__card__controls">
         <button
           type="button"
