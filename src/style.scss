@@ -49,7 +49,8 @@
     }
 
     &__title {
-      @apply h-12 mt-6 mb-6 overflow-y-scroll;
+      @apply h-12 mt-6 mb-6 font-bold overflow-y-scroll;
+      font-size: 0.9rem;
     }
 
     &__controls {
