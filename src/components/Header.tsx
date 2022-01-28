@@ -5,6 +5,7 @@ import cn from 'classnames';
 
 import { switchFilter } from '../slices/cardsReducer';
 import { RootState } from '../slices';
+import museumLogo from '../assets/museumLogo.svg';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -16,16 +17,32 @@ const Header = () => {
     'headeer__filter-button_off': !filterIsOn,
   });
 
+  const allDescriptionClass = cn('header__wrapper__description', {
+    header__wrapper__description_active: !filterIsOn,
+  });
+
+  const likedDescriptionClass = cn('header__wrapper__description', {
+    header__wrapper__description_active: filterIsOn,
+  });
+
   return (
     <header className="header">
-      <h1>Museum</h1>
-      <button
-        type="button"
-        className={buttonClass}
-        onClick={() => dispatch(switchFilter())}
-      >
-        <motion.div className="header__filter-button__circle" layout />
-      </button>
+      <img
+        className="header__logo"
+        src={museumLogo}
+        alt="logo"
+      />
+      <div className="header__wrapper">
+        <p className={allDescriptionClass}>show all</p>
+        <button
+          type="button"
+          className={buttonClass}
+          onClick={() => dispatch(switchFilter())}
+        >
+          <motion.div className="header__filter-button__circle" layout />
+        </button>
+        <p className={likedDescriptionClass}>liked only</p>
+      </div>
     </header>
   );
 };
