@@ -5,7 +5,7 @@ import axios from 'axios';
 import { getItemsURL } from '../utils/urls';
 import { setCardsData } from '../slices/cardsReducer';
 import { RootState } from '../slices/index';
-import { Card } from '../utils/interfaces';
+import { CardProps, Card } from '../utils/interfaces';
 import ImageCard from './ImageCard';
 import spinnerImg from '../assets/spinner.png';
 
@@ -68,7 +68,7 @@ const CardsGallery = () => {
           </p>
           <div className="gallery">
             {
-              filteredCards.map((card: Card) => {
+              filteredCards.map((card: CardProps) => {
                 const {
                   id, title, url, hasLike,
                 } = card;
