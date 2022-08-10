@@ -24,7 +24,6 @@ const CardsGallery = () => {
       })
       .catch((e) => {
         setError(e.message);
-        throw new Error(e.message);
       })
       .finally(() => setIsLoading(false));
   }, []);
